@@ -1,0 +1,10 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dream & Build — вход выполнен</title>
+<style>body{font:16px/1.5 system-ui;max-width:640px;margin:0 auto;padding:16px}</style>
+<h2>Вход выполнен</h2>
+<p id="m">Можно закрыть эту страницу и вернуться в Claude.</p>
+<script>
+const p = new URLSearchParams(location.search);
+if (p.get('error')) document.getElementById('m').textContent = 'Ошибка: ' + (p.get('error_description') || p.get('error'));
+</script>
+</html>
